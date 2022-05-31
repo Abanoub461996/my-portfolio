@@ -1,38 +1,104 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Signika+Negative:wght@400;600&display=swap");
+/* General Styling */
+@font-face {
+  font-family: 'headerFont';
+  src: url("./assets/fonts/RubikMoonrocks-Regular.otf");
+}
+@font-face {
+font-family: 'mainFont';
+src: url("./assets/fonts/Ubuntu-Regular.otf");
+}
+@font-face{
+font-family: 'tailFont';
+  src: url("./assets/fonts/GrapeNuts-Regular.otf");
+}
+:root {
+  --dark: #1d1d1d;
+  --light: #fff;
+  --green: #28a92b;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  color: var(--light);
+  font-family: "Signika Negative", sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  color: var(--dark);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.box {
+  width: 100px;
+  height: 100px;
+  border-radius: 12px;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  text-align: center;
+  background-color: var(--green);
+  font-weight: 600;
+  color: var(--light);
 }
 
-.App-link {
-  color: #61dafb;
+.App {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 10px;
+}
+.app > * + * {
+  margin-top: 1rem
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+body {
+  font-family: 'mainFont';
+  line-height: 1;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+img{
+  height:100%;
+  width:100%;
+}
+.section_outer{
+  width:85%;
+  margin:0 auto;
+  padding-top:25px;
+}
+.section_inner{
+  width:85%;
+  display:flex;
+  justify-content:space-between;
+  margin:0 auto;
+}
+.tags{
+  font-family: 'tailFont';  
+  padding:5px;
+}
+.btn{
+  line-height: 50px;
+  height: 50px;
+  text-align: center;
+  width: 250px;
+  cursor:pointer;
+  border:0;
+  margin-top: 25px;
+}
+.btn span {
+  letter-spacing: 2px;
+}
+.section-title{
+  font-size: xx-large;
+  font-weight: bold;
+  text-align: center;
+}
+.section-title p{
+  display: inline-block;
+  font-size: medium;
+  line-height: 1;
 }

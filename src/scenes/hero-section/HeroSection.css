@@ -1,0 +1,110 @@
+/* Header */
+.home_section{
+    height:100vh;
+    background-image: linear-gradient(to right top, #000000, #332022, #623a38, #925949, #c07d56, #cc9659, #d3b15f, #d3cd6d, #b6dc84, #98e9a4, #78f3ca, #5ffbf1);
+  }
+  
+  .tags.body{
+    padding-left: 20px;
+  }
+  .tags.h1-open{
+    padding-left:40px;
+  }
+  .header_text-zone{
+    width:60%;
+    padding: 20px 0;
+  }
+  .header_text-zone h1{
+    font-family:'headerFont';
+    font-size: xxx-large;
+    line-height: 1.3;
+    letter-spacing: 2px;
+    
+  }
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+  }
+  
+  .name_initial{
+    color:#78f3ca;
+    display:inline-block;
+    transform: skew(-12deg);
+    text-shadow: 1vmin 1vmin 0 #D53A33;
+  }
+  .header_text-zone h1 p{
+    display:inline-block;
+    font-size:medium;
+    line-height: 1;
+  }
+  
+  h4.header_text-extended{
+    margin-top: 20px;
+    font-size: x-large;
+    line-height: 1.3;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: 
+      typing 3.5s steps(40, end),
+      blink-caret .75s step-end infinite;
+  }
+  .header_text-extended p{
+    display:inline-block;
+    font-size: medium;
+    line-height: 1;
+  }
+  
+  .header_contact-me{
+    transition: all 0.3s;
+    position: relative;
+    left:7.5%;
+    top:30px;
+    background-color: transparent;
+  }
+  .header_contact-me span{
+    transition: all 0.3s;
+  }
+  
+  .header_contact-me::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.3s;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-top-color: rgba(255,255,255,0.5);
+    border-bottom-color: rgba(255,255,255,0.5);
+    transform: scale(0.1, 1);
+  }
+  
+  .header_contact-me::before {
+    opacity: 1; 
+    transform: scale(1, 1); 
+  }
+  .header_contact-me::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: all 0.3s;
+    background-color: rgba(255,255,255,0.1);
+  }
+  .header_contact-me:hover::after {
+    opacity: 0; 
+    transform: scale(0.1, 1);
+  }
+  

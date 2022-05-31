@@ -1,0 +1,36 @@
+
+/* PREVIEWS KNOWLEDGE */
+.prev-knowledge{
+    height:100vh;
+    background-image: linear-gradient(to right top, #000000, #332022, #623a38, #925949, #c07d56, #cc9659, #d3b15f, #d3cd6d, #b6dc84, #98e9a4, #78f3ca, #5ffbf1);
+}
+.prev-knowledge-title{
+text-align:center;
+}
+.skills-charts {
+width: 60%;
+-webkit-box-flex: 1;
+-ms-flex: 1 1 auto;
+flex: 1 1 auto;
+}
+#myCanvasContainer {
+position: relative;
+height: 100%;
+width: 100%;
+display: -webkit-box;
+display: -ms-flexbox;
+display: flex;
+-webkit-box-align: center;
+-ms-flex-align: center;
+align-items: center;
+-webkit-box-pack: center;
+-ms-flex-pack: center;
+justify-content: center;
+}
+canvas {
+display: inline-block;
+}
+.page-about #myCanvasContainer li a {
+font-size: 30px;
+font-family: font-file-82132;
+}
