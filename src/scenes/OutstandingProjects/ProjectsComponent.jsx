@@ -1,6 +1,6 @@
 
 // components
-
+import ProjectCard from "./ProjectCard/ProjectCard";
 function ProjectsComponent() {
 
   return (<>
@@ -15,11 +15,11 @@ function ProjectsComponent() {
             OUTSTANDING PROJECTS
             <p class="tags">&lt;/h2&gt;</p>
           </h2>
-          <div class="projects_content">
             <p class="tags">&lt;div&gt;</p>
-
-            <p class="tags">&lt;/div&gt;</p>
+          <div class="projects_content">
+              <ProjectCard />
           </div>
+            <p class="tags">&lt;/div&gt;</p>
         </div>
         <div class="projects_bottom-tags">
           <p class="tags">&lt;/section&gt;</p>
