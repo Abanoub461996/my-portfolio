@@ -1,9 +1,9 @@
 import { useState } from "react";
 import HobbyCard from "./HobbyCard/HobbyCard";
-import "./Personalcomponent.css";
+import "./PersonalRComponent.css";
 // components
 
-function PersonalComponent() {
+function PersonalLBComponent() {
   const [cardTitles, setCardTitles] = useState(["FootBall","BasketBall", "Anime"]);
 
 
@@ -12,7 +12,7 @@ function PersonalComponent() {
         <div class="personal_top-tags">
           <p class="tags">&lt;section&gt;</p>
         </div>
-        <div class="section_inner">
+        <div class="section_inner section-flex">
           <div class="personal_content">
             <h2 class="personal_content-title">
                 <p class="tags" style={{marginLeft:-50}}>&lt;h2&gt;</p>
@@ -21,16 +21,13 @@ function PersonalComponent() {
             </h2>
             <p class="tags" style={{marginLeft:-50}}>&lt;p&gt;</p>
             <p class="personal_content-details">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat
-              accusamus aut architecto? Natus eveniet laudantium distinctio
-              reprehenderit tenetur dolorum hic eos neque, expedita mollitia
-              obcaecati nisi ab, tempore quisquam eligendi!
+              If you like football, BasketBall and Japaniese Anime. Then let's drink a coffee and have a talk.
             </p>
             <p class="tags" style={{marginLeft:-50}}>&lt;/p&gt;</p>
             <p class="tags" style={{marginLeft:-50}}>
               &lt;div class="personal_macAnimation"&gt;
             </p>
-            <div style={{height: 250}}>
+            <div style={{height: 210}}>
               <div class="macbook">
                 <div class="inner">
                   <div class="screen">
@@ -137,14 +134,6 @@ function PersonalComponent() {
               </div>
             </div>
           </div>
-          <div class="hoppies_visual">
-            
-            <HobbyCard title={cardTitles[0]} src1={'1.jpg'} src2={'1.jpg'}/>
-            <HobbyCard title={cardTitles[1]} src1={'bascket.jpg'} src2={'bascket2.jpg'}/>
-            <HobbyCard title={cardTitles[2]} src1={'1.jpg'} src2={'anime2.jpg'}/>
-
-
-          </div>
 
         </div>
         <div class="skills_bottom-tags">
@@ -157,4 +146,4 @@ function PersonalComponent() {
   </>);
 }
 
-export default PersonalComponent;
+export default PersonalLBComponent;

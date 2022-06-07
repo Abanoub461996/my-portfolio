@@ -1,7 +1,6 @@
-
 // components
 import ProjectCard from "./ProjectCard/ProjectCard";
-function ProjectsComponent() {
+function ProjectsRComponent() {
 
   return (<>
   <section class="projects">
@@ -29,4 +28,4 @@ function ProjectsComponent() {
   </>);
 }
 
-export default ProjectsComponent;
+export default ProjectsRComponent;

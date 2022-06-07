@@ -1,7 +1,7 @@
 
 /* PREVIEWS KNOWLEDGE */
 .prev-knowledge{
-    height:100vh;
+    /* height:100vh; */
     background-image: linear-gradient(to right top, #000000, #332022, #623a38, #925949, #c07d56, #cc9659, #d3b15f, #d3cd6d, #b6dc84, #98e9a4, #78f3ca, #5ffbf1);
 }
 .prev-knowledge-title{
@@ -33,4 +33,7 @@ display: inline-block;
 .page-about #myCanvasContainer li a {
 font-size: 30px;
 font-family: font-file-82132;
+}
+.prev-knowledge_content, .knowledge_items{
+    width:50%
 }

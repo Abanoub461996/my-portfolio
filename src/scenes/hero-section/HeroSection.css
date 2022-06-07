@@ -1,7 +1,5 @@
 /* Header */
 .home_section{
-    height:100vh;
-    background-image: linear-gradient(to right top, #000000, #332022, #623a38, #925949, #c07d56, #cc9659, #d3b15f, #d3cd6d, #b6dc84, #98e9a4, #78f3ca, #5ffbf1);
   }
   
   .tags.body{
@@ -11,7 +9,7 @@
     padding-left:40px;
   }
   .header_text-zone{
-    width:60%;
+    /* width:60%; */
     padding: 20px 0;
   }
   .header_text-zone h1{

@@ -36,9 +36,9 @@ function HeroSection() {
         </h4>
       </div>
     </div>
-    <button class="header_contact-me btn" type="button">
+    {/* <button class="header_contact-me btn" type="button">
       <span>CONTACT ME!</span>
-    </button>
+    </button> */}
   </div>
   </header>
   );
