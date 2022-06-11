@@ -1,10 +1,10 @@
 import "./ProjectCard.css"
-function ProjectCard(){
+function ProjectCard({project ,id}){
     return(<>
-        <div id="card_container">	
+        <div class="card_container" id={id}>	
               
               <div class="card-details">
-                <h1>Website</h1>
+                <h1>{project.title}</h1>
                 <span class="hint-star star">
                   <i class="fa fa-star" aria-hidden="true"></i>
                   <i class="fa fa-star" aria-hidden="true"></i>
@@ -12,10 +12,10 @@ function ProjectCard(){
                   <i class="fa fa-star" aria-hidden="true"></i>
                   <i class="fa fa-star-o" aria-hidden="true"></i>
                 </span>
-		        	  <p class="information">" Let's spread the joy , here is Christmas , the most awaited day of the year.Christmas Tree is what one need the most. Here is the correct tree which will enhance your Christmas.</p>
+		        	  <p class="information">{project.descreption}</p>
                 <div class="card_control">
                   
-                  <button class="card_btn">
+                <button class="card_btn">
                   <span class="web_repo">Git</span>
                   <span class="web_visit">Visit </span>
                 </button>
@@ -27,7 +27,7 @@ function ProjectCard(){
                 <div class="info">
                   <h2>Description</h2>
                   <ul>
-                    <li><strong>Height : </strong>5 Ft </li>
+                    <li><strong>Height : </strong>{project.project_info.date} </li>
                     <li><strong>Shade : </strong>Olive green</li>
                     <li><strong>Decoration: </strong>balls and bells</li>
                     <li><strong>Material: </strong>Eco-Friendly</li>

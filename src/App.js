@@ -15,13 +15,15 @@ import './App.css';
 function App() {
   gsap.registerPlugin(ScrollTrigger);
 
+  
   useEffect(() => {
     gsap.to("#id", {
       display: "none",
       ease: "easeInOut",
       scrollTrigger: {
         trigger: "#id",
-        // markers: true,
+        preventOverlaps: true,
+        fastScrollEnd: true,
         start: "center center",
         end: 'bottom center',
         scrub: true
@@ -38,6 +40,8 @@ function App() {
         // markers: true,
         start: "center center",
         end: 'bottom center',
+        preventOverlaps: true,
+        fastScrollEnd: true,
         scrub: true
       }
     });
@@ -48,7 +52,8 @@ function App() {
       ease: "easeInOut",
       scrollTrigger: {
         trigger: "#LB1",
-        markers: true,
+        preventOverlaps: true,
+        fastScrollEnd: true,
         start: "top center",
         end: 'bottom-=200 center',
         scrub: true
@@ -62,7 +67,8 @@ function App() {
       ease: "easeInOut",
       scrollTrigger: {
         trigger: "#LB2",
-        markers: true,
+        preventOverlaps: true,
+        fastScrollEnd: true,
         start: "top-=200 center",
         end: 'bottom center',
         scrub: true
@@ -79,20 +85,20 @@ function App() {
 
         </div>
         <div className="left-bottom">
-        <div id="LB1"  style={{display:'block'}}>
-        <PersonalLBComponent/>
-        </div>
-        <div id="LB2" style={{display:'none',opacity:0}}>
+        <div id=""  style={{display:'block'}}>
         <ProjectsLBComponent/>
+        </div>
+        <div id="" style={{display:'none',opacity:0}}>
+        <PersonalLBComponent/>
         </div>
         </div>
       </div>
       <div className="right-portion">
-        <div id="id"  style={{display:'block'}}>
-        <PersonalRComponent/>
-        </div>
-        <div id="otherId" style={{display:'none',opacity:0}}>
+        <div id=""  style={{display:'block'}}>
         <ProjectsRComponent/>
+        </div>
+        <div id="" style={{display:'none',opacity:0}}>
+        <PersonalRComponent/>
         </div>
       </div>
       

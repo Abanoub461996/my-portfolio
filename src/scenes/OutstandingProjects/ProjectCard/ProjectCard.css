@@ -1,4 +1,4 @@
-#card_container{
+.card_container{
   box-shadow: 0 15px 30px 1px grey;
   background: rgba(255, 255, 255, 0.90);
   text-align: center;
@@ -17,14 +17,14 @@
   float: left;
   width: 40%;
 }
-#card_container .card-details h1{
+.card_container .card-details h1{
   display: inline-block;
   position: relative;
   font-size: 30px;
   color: #344055;
   margin: 0;
 }
-#card_container .card-details h1:before{
+.card_container .card-details h1:before{
   position: absolute;
   content: '';
   right: 0%; 
@@ -39,13 +39,10 @@
   margin: 0;
   animation: chan-sh 6s ease infinite;
 }
-.hint-star {
-  display: inline-block;
-  margin-left: 0.5em;
-  color: gold;
-  width: 50%;
+.information{
+  color: #01153c;
 }
-#card_container .product-details > p {
+.card_container .product-details > p {
   text-align: center;
   font-size: 18px;
   color: #7d7d7d;
@@ -53,8 +50,7 @@
 }
 .card_control{
   position: absolute;
-  bottom: 20%;
-  left: 22.8%;
+  bottom: 15%;
   
 }
 .card_btn {
@@ -86,9 +82,8 @@
   margin: 0;
 }
 
-.web_visit:hover {width:150%;; background: #1a66ff;}
-
-.web_repo:hover {width:70%;}
+.web_visit:hover { padding: 10px 50px; background: #1a66ff;}
+.web_repo:hover {padding: 10px 50px;}
 
 .card-image {
   transition: all 0.3s ease-out;
