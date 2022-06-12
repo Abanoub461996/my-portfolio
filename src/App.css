@@ -23,8 +23,7 @@ body {
   color: var(--light);
   margin: 0;
   padding: 0;
-  height: 200vh;
-  /* overflow: hidden; */
+  height: 500vh!important;
 }
 
 * {
@@ -36,6 +35,9 @@ body {
 img{
   height:100%;
   width:100%;
+}
+#otherId{
+  height:100%;
 }
 .pageContainer{
   display: flex;

@@ -9,11 +9,24 @@
     border-radius: 20px;
     
 }
-.projects_content{
+section.projects{
+    height:100%;
+}
+.projects_inner{
     height:90vh;
-    overflow-y: auto;
+}
+.projects_content{
+    height:100vh;
+    overflow-y: scroll;
     overflow-x: hidden;
 }
 .card_container{
-    transform: translateX(-120%);
+    visibility: hidden;
+    opacity: 0;
+
+}
+#project_1{
+    /* display: block;
+    opacity: 1; */
+
 }

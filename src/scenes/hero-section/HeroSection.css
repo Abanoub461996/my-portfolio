@@ -32,7 +32,7 @@
     color:#78f3ca;
     display:inline-block;
     transform: skew(-12deg);
-    text-shadow: 1vmin 1vmin 0 #D53A33;
+    text-shadow: 7px 7px 0 #D53A33;
   }
   .header_text-zone h1 p{
     display:inline-block;

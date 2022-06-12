@@ -37,7 +37,6 @@ function App() {
       ease: "easeInOut",
       scrollTrigger: {
         trigger: "#otherId",
-        // markers: true,
         start: "center center",
         end: 'bottom center',
         preventOverlaps: true,
@@ -85,20 +84,20 @@ function App() {
 
         </div>
         <div className="left-bottom">
-        <div id=""  style={{display:'block'}}>
-        <ProjectsLBComponent/>
-        </div>
-        <div id="" style={{display:'none',opacity:0}}>
+        <div id="LB1"  style={{display:'block'}}>
         <PersonalLBComponent/>
+        </div>
+        <div id="LB2" style={{display:'none',opacity:0}}>
+        <ProjectsLBComponent/>
         </div>
         </div>
       </div>
       <div className="right-portion">
-        <div id=""  style={{display:'block'}}>
-        <ProjectsRComponent/>
-        </div>
-        <div id="" style={{display:'none',opacity:0}}>
+        <div id="id"  style={{display:'block'}}>
         <PersonalRComponent/>
+        </div>
+        <div id="otherId" style={{display:'none',opacity:0}}>
+        <ProjectsRComponent/>
         </div>
       </div>
       
