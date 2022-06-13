@@ -36,9 +36,6 @@ img{
   height:100%;
   width:100%;
 }
-#otherId{
-  height:100%;
-}
 .pageContainer{
   display: flex;
   position: fixed;

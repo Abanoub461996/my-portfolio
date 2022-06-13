@@ -15,24 +15,21 @@ function ProjectsRComponent() {
   gsap.registerPlugin(ScrollTrigger);
 
   
-  useEffect(() => {
-    gsap.to("#project_2", {
-      visibility: "visible",
-      opacity:1,
-      x:100,
-      ease: "easeInOut",
-      scrollTrigger: {
-        trigger: "#project_2",
-        scroller:".projects_content",
-        markers: true,
-        preventOverlaps: true,
-        fastScrollEnd: true,
-        start: "top top",
-        end: 'bottom top',
-        scrub: true
-      }
-    });
-  }, []);
+  // useEffect(() => {
+  //   gsap.to("#project_2", {
+  //     visibility: "visible",
+  //     opacity:1,
+  //     ease: "easeInOut",
+  //     scrollTrigger: {
+  //       scroller:".projects_content",
+  //       trigger: "#project_2",
+  //       markers: true,
+  //       start: "top center",
+  //       end: 'bottom bottom+=400',
+  //     }
+  //   });
+  // }, []);
+
 const projects =[{
   title:'Website',
   descreption:"Let's spread the joy , here is Christmas , the most awaited day of the year.Christmas Tree is what one need the most. Here is the correct tree which will enhance your Christmas.",
@@ -83,9 +80,9 @@ const projects =[{
 ]
 
 // useEffect(()=>{
-//   // ScrollReveal().reveal('#project_1', { distance: '100%',origin: 'bottom',easing: 'ease-in' ,duration:1000,reset:true });
+//   ScrollReveal().reveal('#project_1', { distance: '100%',origin: 'bottom',easing: 'ease-in' ,duration:1000,reset:true });
 //   ScrollReveal().reveal('#project_2', { distance: '150%',origin: 'bottom',easing: 'ease-in' ,duration:1000,reset:true });
-//   ScrollReveal().reveal('#project_3', { distance: '100%',scale:0.5,container:".projects_content",origin: 'bottom',easing: 'ease-in' ,duration:1000,reset:true });
+//   ScrollReveal().reveal('#project_3', { distance: '100%',container:".projects_content",origin: 'bottom',easing: 'ease-in' ,duration:1000,reset:true });
 //   ScrollReveal().reveal('#project_4', { distance: '100%',origin: 'bottom',container:".projects_content",easing: 'ease-in' ,duration:1000,reset:true });
 //   ScrollReveal().reveal('#project_5', { distance: '100%',origin: 'bottom',easing: 'ease-in' ,container:".projects_content",duration:1000,reset:true });
 

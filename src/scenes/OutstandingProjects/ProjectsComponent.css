@@ -10,19 +10,19 @@
     
 }
 section.projects{
-    height:100%;
+    /* height:100%; */
 }
 .projects_inner{
     height:90vh;
 }
 .projects_content{
-    height:100vh;
+    height:100%;
     overflow-y: scroll;
     overflow-x: hidden;
 }
 .card_container{
-    visibility: hidden;
-    opacity: 0;
+    /* visibility: hidden;
+    opacity: 0; */
 
 }
 #project_1{
