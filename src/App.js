@@ -113,7 +113,7 @@ function App() {
         <div id="otherId" style={{display:'none',opacity:0}}>
         <ProjectsRComponent/>
         </div> */}
-        <div id="">
+        <div id="impo">
         <SkillsRComponent/>
         </div>
       </div>

@@ -1,5 +1,5 @@
 // Drawing with text. Ported from Generative Design book - http://www.generative-gestaltung.de - Original licence: http://www.apache.org/licenses/LICENSE-2.0
-function drowing(canvas){
+function drowing(canvas,parent){
     // Drawing with text. Ported from Generative Design book - http://www.generative-gestaltung.de - Original licence: http://www.apache.org/licenses/LICENSE-2.0
 
 // Application variables
@@ -7,16 +7,17 @@ var position = {x: 0, y: window.innerHeight/2};
 var counter = 0;
 var minFontSize = 3;
 var angleDistortion = 0;
-var letters = "CSS HTML, and the March Hare and the Hatter were having tea at it: a Dormouse was sitting between them, fast asleep, and the other two were using it as a cushion, resting their elbows on it, and talking over its head. 'Very uncomfortable for the Dormouse,' thought Alice; 'only, as it's asleep, I suppose it doesn't mind.'";
+var letters = ["HTML          CSS      afsadas        CSS        afsadas      CSS     afsadas"]
+// "There was a table set out under a tree in front of the house, and the March Hare and the Hatter were having tea at it: a Dormouse was sitting between them, fast asleep, and the other two were using it as a cushion, resting their elbows on it, and talking over its head. 'Very uncomfortable for the Dormouse,' thought Alice; 'only, as it's asleep, I suppose it doesn't mind.'";
 
 // Drawing variables
+var canvas;
 var context;
 var mouse = {x: 0, y: 0, down: false}
 
 function init() {
-  
   context = canvas.getContext( '2d' );
-  canvas.width = window.innerWidth/2;
+  canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
   
   canvas.addEventListener('mousemove', mouseMove, false);
@@ -26,7 +27,7 @@ function init() {
   canvas.addEventListener('dblclick', doubleClick, false);
   
   window.onresize = function(event) {
-    canvas.width = window.innerWidth/2;
+    canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
   }
 }
@@ -35,32 +36,35 @@ function mouseMove ( event ){
   mouse.x = event.pageX;
   mouse.y = event.pageY;
   draw();
-
 }
 
 function draw() {
-
- if ( mouse.down ) {
+  if ( mouse.down ) {
     var d = distance( position, mouse );
     var fontSize = minFontSize + d/2;
     var letter = letters[counter];
-    var stepSize = textWidth( letter, fontSize );
-    
+    var stepSize = textWidth( letter, fontSize);
+    console.log(stepSize);
     if (d > stepSize) {
       var angle = Math.atan2(mouse.y-position.y, mouse.x-position.x);
-      context.font = fontSize + "px";
+      
+      context.font = fontSize + "px Georgia";
+    
       context.save();
-      context.translate(position.x, position.y);
-      context.rotate(angle);
+      context.translate((position.x-(window.innerWidth/2)), position.y);
+      context.rotate( angle );
       context.fillText(letter,0,0);
       context.restore();
+
       counter++;
       if (counter > letters.length-1) {
         counter = 0;
       }
+    
       position.x = position.x + Math.cos(angle) * stepSize;
       position.y = position.y + Math.sin(angle) * stepSize;
-    }
+
+      }
   }     
 }
 
@@ -98,9 +102,9 @@ function textWidth( string, size ) {
   context.font = size + "px Georgia";
   
   if ( context.fillText ) {
-    return context.measureText(string).width;
-  } else if (context.mozDrawText) {
-    return context.mozMeasureText(string);
+    return context.measureText( string ).width;
+  } else if ( context.mozDrawText) {
+    return context.mozMeasureText( string );
   }
   
  };
