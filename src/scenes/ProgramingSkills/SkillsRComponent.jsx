@@ -7,9 +7,9 @@ function SkillsRComponent() {
     useEffect(()=>{
         const canvas = document.getElementById("canvas")
         const parent = document.getElementById("impo")
-
+    
         drowing(canvas,parent);
-    })
+    },[])
   return (
   <section className="skills">
      <div className="section_outer">

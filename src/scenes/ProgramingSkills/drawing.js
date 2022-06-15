@@ -7,12 +7,18 @@ var position = {x: 0, y: window.innerHeight/2};
 var counter = 0;
 var minFontSize = 3;
 var angleDistortion = 0;
-var letters = ["HTML          CSS      afsadas        CSS        afsadas      CSS     afsadas"]
+var skills = [" HTML "," CSS ", " SCSS " ," HTML "," JavaScript ", " JQuery "," ES6 "," Typescript ", " Bootstrap5 "
+," React.js ", " Angular "," Redux "," Node.js ", " express. "," C++ ", " Object Oriented Programming. "
+," Data Structure "," Algorithms. ", " Design patterns "," Version control "]
 // "There was a table set out under a tree in front of the house, and the March Hare and the Hatter were having tea at it: a Dormouse was sitting between them, fast asleep, and the other two were using it as a cushion, resting their elbows on it, and talking over its head. 'Very uncomfortable for the Dormouse,' thought Alice; 'only, as it's asleep, I suppose it doesn't mind.'";
 
 // Drawing variables
 var canvas;
+let index=0;
+let word=skills[0];
 var context;
+let flagg = false;
+
 var mouse = {x: 0, y: 0, down: false}
 
 function init() {
@@ -42,10 +48,10 @@ function draw() {
   if ( mouse.down ) {
     var d = distance( position, mouse );
     var fontSize = minFontSize + d/2;
-    var letter = letters[counter];
+    word =skills[index]
+    var letter = word[counter];
     var stepSize = textWidth( letter, fontSize);
-    console.log(stepSize);
-    if (d > stepSize) {
+    if (true) {
       var angle = Math.atan2(mouse.y-position.y, mouse.x-position.x);
       
       context.font = fontSize + "px Georgia";
@@ -55,12 +61,16 @@ function draw() {
       context.rotate( angle );
       context.fillText(letter,0,0);
       context.restore();
-
       counter++;
-      if (counter > letters.length-1) {
+      if(counter === word.length ){
+        index++;
         counter = 0;
       }
-    
+       if(index === skills.length){
+        console.log("here");
+        index=0;
+        counter=0;
+      }
       position.x = position.x + Math.cos(angle) * stepSize;
       position.y = position.y + Math.sin(angle) * stepSize;
 
