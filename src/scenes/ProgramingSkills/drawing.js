@@ -1,5 +1,5 @@
 // Drawing with text. Ported from Generative Design book - http://www.generative-gestaltung.de - Original licence: http://www.apache.org/licenses/LICENSE-2.0
-function drowing(canvas,parent){
+function drowing(canvas){
     // Drawing with text. Ported from Generative Design book - http://www.generative-gestaltung.de - Original licence: http://www.apache.org/licenses/LICENSE-2.0
 
 // Application variables
@@ -66,11 +66,11 @@ function draw() {
         index++;
         counter = 0;
       }
-       if(index === skills.length){
-        console.log("here");
+      if(index === skills.length){
         index=0;
         counter=0;
       }
+        console.log(angle);
       position.x = position.x + Math.cos(angle) * stepSize;
       position.y = position.y + Math.sin(angle) * stepSize;
 

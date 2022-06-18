@@ -22,35 +22,66 @@ function App() {
 
   
   useEffect(() => {
-    gsap.to("#id", {
+    gsap.to("#R1", {
       display: "none",
       ease: "easeInOut",
       scrollTrigger: {
-        trigger: "#id",
+        trigger: "#LB1",
         preventOverlaps: true,
         fastScrollEnd: true,
-        start: "center center",
+        start: "top center",
+        end: 'bottom-=200 center',
+        scrub: true
+      }
+    });
+  }, []);
+  useEffect(() => {
+    gsap.to("#R2", {
+      display: "block",
+      opacity:1,
+      ease: "easeInOut",
+      scrollTrigger: {
+        trigger: "#LB2",
+        preventOverlaps: true,
+        fastScrollEnd: true,
+        start: "top-=200 center",
         end: 'bottom center',
         scrub: true
       }
     });
   }, []);
   useEffect(() => {
-    gsap.to("#otherId", {
-      display: "block",
-      opacity:1,
+    gsap.to("#R2", {
+      display: "none",
+      opacity:0,
       ease: "easeInOut",
       scrollTrigger: {
-        trigger: "#otherId",
-        start: "center center",
-        end: 'bottom center',
-        onToggle: self => setInnerScroll(self.isActive),
+        trigger: "#LB3",
+        markers:true,
         preventOverlaps: true,
         fastScrollEnd: true,
+        start: "top top",
+        end: 'center top',
         scrub: true
       }
     });
   }, []);
+  useEffect(() => {
+    gsap.to("#R3", {
+      display: "block",
+      opacity:1,
+      ease: "easeInOut",
+      scrollTrigger: {
+        trigger: "#LB3",
+        preventOverlaps: true,
+        fastScrollEnd: true,
+        start: "bottom center",
+        scrub: true
+      }
+    });
+  }, []);
+
+  
   useEffect(() => {
     gsap.to("#LB1", {
       display: "none",
@@ -66,6 +97,7 @@ function App() {
       }
     });
   }, []);
+
   useEffect(() => {
     gsap.to("#LB2", {
       display: "block",
@@ -73,6 +105,37 @@ function App() {
       ease: "easeInOut",
       scrollTrigger: {
         trigger: "#LB2",
+        preventOverlaps: true,
+        fastScrollEnd: true,
+        start: "top-=200 center",
+        end: 'bottom center',
+        scrub: true
+      }
+    });
+  }, []);
+  useEffect(() => {
+    gsap.to("#LB2", {
+      display: "none",
+      opacity:0,
+      ease: "easeInOut",
+      scrollTrigger: {
+        trigger: "#LB3",
+        markers:true,
+        preventOverlaps: true,
+        fastScrollEnd: true,
+        start: "top top",
+        end: 'center top',
+        scrub: true
+      }
+    });
+  }, []);
+  useEffect(() => {
+    gsap.to("#LB3", {
+      display: "block",
+      opacity:1,
+      ease: "easeInOut",
+      scrollTrigger: {
+        trigger: "#LB3",
         preventOverlaps: true,
         fastScrollEnd: true,
         start: "top-=200 center",
@@ -101,21 +164,21 @@ function App() {
           <div id="LB2" style={{display:'none',opacity:0}}>
           <ProjectsLBComponent/>
           </div>
-          {/* <div id="LB3">
+          <div id="LB3" style={{display:'none',opacity:0}}>
           <SkillsLBComponent/>
-          </div>  */}
+          </div> 
         </div>
       </div>
       <div className="right-portion">
-        <div id="id"  style={{display:'block'}}>
+        <div id="R1"  style={{display:'block'}}>
         <PersonalRComponent/>
         </div>
-        <div id="otherId" style={{display:'none',opacity:0}}>
+        <div id="R2" style={{display:'none',opacity:0}}>
         <ProjectsRComponent/>
         </div>
-        {/* <div id="impo">
+        <div id="R3" style={{display:'none',opacity:0}}>
         <SkillsRComponent/>
-        </div> */}
+        </div>
       </div>
       
     </div>

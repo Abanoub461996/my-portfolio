@@ -6,9 +6,8 @@ import "./SkillsComponent.css"
 function SkillsRComponent() {
     useEffect(()=>{
         const canvas = document.getElementById("canvas")
-        const parent = document.getElementById("impo")
-    
-        drowing(canvas,parent);
+        console.log("called drowing");
+        drowing(canvas);
     },[])
   return (
   <section className="skills">
