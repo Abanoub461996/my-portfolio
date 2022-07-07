@@ -79,14 +79,14 @@ const projects =[{
 }
 ]
 
-// useEffect(()=>{
-//   ScrollReveal().reveal('#project_1', { distance: '100%',origin: 'bottom',easing: 'ease-in' ,duration:1000,reset:true });
-//   ScrollReveal().reveal('#project_2', { distance: '150%',origin: 'bottom',easing: 'ease-in' ,duration:1000,reset:true });
-//   ScrollReveal().reveal('#project_3', { distance: '100%',container:".projects_content",origin: 'bottom',easing: 'ease-in' ,duration:1000,reset:true });
-//   ScrollReveal().reveal('#project_4', { distance: '100%',origin: 'bottom',container:".projects_content",easing: 'ease-in' ,duration:1000,reset:true });
-//   ScrollReveal().reveal('#project_5', { distance: '100%',origin: 'bottom',easing: 'ease-in' ,container:".projects_content",duration:1000,reset:true });
+useEffect(()=>{
+  ScrollReveal().reveal('#project_1', { distance: '100%',origin: 'bottom',easing: 'ease-in' ,duration:1000,reset:true });
+  ScrollReveal().reveal('#project_2', { distance: '150%',origin: 'bottom',easing: 'ease-in' ,duration:1000,reset:true });
+  ScrollReveal().reveal('#project_3', { distance: '100%',container:".projects_content",origin: 'bottom',easing: 'ease-in' ,duration:1000,reset:true });
+  ScrollReveal().reveal('#project_4', { distance: '100%',origin: 'bottom',container:".projects_content",easing: 'ease-in' ,duration:1000,reset:true });
+  ScrollReveal().reveal('#project_5', { distance: '100%',origin: 'bottom',easing: 'ease-in' ,container:".projects_content",duration:1000,reset:true });
 
-// },[])
+},[])
   return (<>
   <section className="projects">
       <div className="section_outer">

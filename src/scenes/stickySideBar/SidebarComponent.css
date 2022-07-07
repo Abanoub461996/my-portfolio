@@ -1,0 +1,14 @@
+.sidebar-container{
+    color: red;
+    font-size: 25px;
+    width: -moz-fit-content;
+    height: 0;
+    margin-left: 70px;
+    position: sticky;
+    top: 75%;
+    z-index: 3;
+}
+.sidebar-icon{
+    padding:10px;
+    width: fit-content;
+}

@@ -2,7 +2,9 @@ import { useRef, useEffect, useState} from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 // components
+// HeroSection
 import HeroSection from './scenes/hero-section/HeroSection';
+// Personal
 import PersonalRComponent from './scenes/Personal/PersonalRComponent';
 import PersonalLBComponent from './scenes/Personal/PersonalLBComponent';
 // Projects
@@ -11,180 +13,124 @@ import ProjectsLBComponent from "./scenes/OutstandingProjects/ProjectsLBComponen
 // SKILLS
 import SkillsLBComponent from "./scenes/ProgramingSkills/SkillsLBComponent";
 import SkillsRComponent from "./scenes/ProgramingSkills/SkillsRComponent";
-
+// Education
+import EducationComponent from "./scenes/Education/EducationComponent.jsx"
+// Footer
+import Contact from "./scenes/contact/ContactComponent";
+// SideBar
+import Sidebar from "./scenes/stickySideBar/SidebarComponent";
 // Styling Sheet
 import './App.css';
 
 
 function App() {
-  const [innerScroll, setInnerScroll]=useState(false)
+  const [innerWidth, setInnerWidth]=useState(-window.innerWidth/2);
+console.log(innerWidth);
   gsap.registerPlugin(ScrollTrigger);
 
   
   useEffect(() => {
+    gsap.to("#L1", {
+      ease: "easeInOut",
+      x:0,
+      opacity:1,
+      scrollTrigger: {
+        trigger: "#projects",
+        markers:true,
+        preventOverlaps: true,
+        fastScrollEnd: true,
+        start: "top center",
+        end: 'center-=200 center',
+        scrub: true
+      }
+    });
+  }, []);
+  useEffect(() => {
     gsap.to("#R1", {
-      display: "none",
       ease: "easeInOut",
+      x:0,
+      opacity:1,
       scrollTrigger: {
-        trigger: "#LB1",
+        trigger: "#projects",
         preventOverlaps: true,
         fastScrollEnd: true,
         start: "top center",
-        end: 'bottom-=200 center',
+        end: 'center-=200 center',
         scrub: true
       }
     });
   }, []);
   useEffect(() => {
-    gsap.to("#R2", {
-      display: "block",
-      opacity:1,
-      ease: "easeInOut",
-      scrollTrigger: {
-        trigger: "#LB2",
-        preventOverlaps: true,
-        fastScrollEnd: true,
-        start: "top-=200 center",
-        end: 'bottom center',
-        scrub: true
-      }
-    });
-  }, []);
-  useEffect(() => {
-    gsap.to("#R2", {
-      display: "none",
-      opacity:0,
-      ease: "easeInOut",
-      scrollTrigger: {
-        trigger: "#LB3",
-        markers:true,
-        preventOverlaps: true,
-        fastScrollEnd: true,
-        start: "top top",
-        end: 'center top',
-        scrub: true
-      }
-    });
-  }, []);
-  useEffect(() => {
-    gsap.to("#R3", {
-      display: "block",
-      opacity:1,
-      ease: "easeInOut",
-      scrollTrigger: {
-        trigger: "#LB3",
-        preventOverlaps: true,
-        fastScrollEnd: true,
-        start: "bottom center",
-        scrub: true
-      }
-    });
-  }, []);
-
-  
-  useEffect(() => {
-    gsap.to("#LB1", {
-      display: "none",
-      ease: "easeInOut",
-      scrollTrigger: {
-        trigger: "#LB1",
-        
-        preventOverlaps: true,
-        fastScrollEnd: true,
-        start: "top center",
-        end: 'bottom-=200 center',
-        scrub: true
-      }
-    });
-  }, []);
-
-  useEffect(() => {
-    gsap.to("#LB2", {
-      display: "block",
-      opacity:1,
-      ease: "easeInOut",
-      scrollTrigger: {
-        trigger: "#LB2",
-        preventOverlaps: true,
-        fastScrollEnd: true,
-        start: "top-=200 center",
-        end: 'bottom center',
-        scrub: true
-      }
-    });
-  }, []);
-  useEffect(() => {
-    gsap.to("#LB2", {
-      display: "none",
-      opacity:0,
-      ease: "easeInOut",
-      scrollTrigger: {
-        trigger: "#LB3",
-        markers:true,
-        preventOverlaps: true,
-        fastScrollEnd: true,
-        start: "top top",
-        end: 'center top',
-        scrub: true
-      }
-    });
-  }, []);
-  useEffect(() => {
-    gsap.to("#LB3", {
-      display: "block",
-      opacity:1,
-      ease: "easeInOut",
-      scrollTrigger: {
-        trigger: "#LB3",
-        preventOverlaps: true,
-        fastScrollEnd: true,
-        start: "top-=200 center",
-        end: 'bottom center',
-        scrub: true
-      }
-    });
-  }, []);
-  useEffect(()=>{
-    document.getElementById('overall-body').style.height="100%!important"
-  },[innerScroll])
-  console.log(innerScroll)
+  gsap.to("#L4", {
+    ease: "easeInOut",
+    x:0,
+    opacity:1,
+    scrollTrigger: {
+      trigger: "#personal",
+      markers:true,
+      preventOverlaps: true,
+      fastScrollEnd: true,
+      start: "top center",
+      end: 'center center',
+      scrub: true
+    }
+  });
+}, []);
+useEffect(() => {
+  gsap.to("#R4", {
+    ease: "easeInOut",
+    x:0,
+    opacity:1,
+    scrollTrigger: {
+      trigger: "#personal",
+      preventOverlaps: true,
+      fastScrollEnd: true,
+      start: "top center",
+      end: 'center center',
+      scrub: true
+    }
+  });
+}, []);
   
 
   return (<>
     <div className="pageContainer">
-      <div className="left-portion">
-        <div className="left-top">
+      {/* <Sidebar  id="side-bar"/> */}
          <HeroSection />
-
-        </div>
-        <div className="left-bottom">
-          <div id="LB1"  style={{display:'block'}}>
-          <PersonalLBComponent/>
-          </div>
-          <div id="LB2" style={{display:'none',opacity:0}}>
-          <ProjectsLBComponent/>
-          </div>
-          <div id="LB3" style={{display:'none',opacity:0}}>
-          <SkillsLBComponent/>
-          </div> 
-        </div>
-      </div>
-      <div className="right-portion">
-        <div id="R1"  style={{display:'block'}}>
-        <PersonalRComponent/>
-        </div>
-        <div id="R2" style={{display:'none',opacity:0}}>
-        <ProjectsRComponent/>
-        </div>
-        <div id="R3" style={{display:'none',opacity:0}}>
-        <SkillsRComponent/>
-        </div>
-      </div>
-      
+         
+         <div id="projects">
+          <div id="L1" style={{'transform':`translateX(${innerWidth}px)`}}>
+            <ProjectsLBComponent/>
+            </div>
+            <div id="R1" style={{'transform':`translateX(${-innerWidth}px)`}}>
+            <ProjectsRComponent/>
+            </div>
+         </div>
+         <div id="skills">
+          <div id="L2">
+              <SkillsLBComponent/>
+            </div>
+            <div id="R2">
+              <SkillsRComponent/>
+            </div>
+         </div>
+         <div id="education">
+         <EducationComponent/>
+         </div>
+         <div id="personal">
+          <div id="L4" style={{'transform':`translateX(${innerWidth}px)`}}>
+            <PersonalLBComponent/>
+            </div>
+            <div id="R4" style={{'transform':`translateX(${-innerWidth}px)`}}>
+            <PersonalRComponent/>
+            </div>
+         </div>
+         <div id="contacts">
+         <Contact/>
+         </div>
+         
+         
     </div>
-    
-      
-    
   </>
   );
 }

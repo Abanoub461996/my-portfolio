@@ -1,13 +1,11 @@
-import {Typewriter} from 'react-simple-typewriter';
-// import "react-simple-typewriter/dist/index.css";
-import { useTypewriter, Cursor} from 'react-simple-typewriter'
+import { useTypewriter, Cursor} from 'react-simple-typewriter';
 import "./HeroSection.css"
 // components
 
 
 
 function HeroSection() {
-  const { text, count } = useTypewriter({
+  const { text} = useTypewriter({
     /* Config */
     words: ["Work With React and Angular."],
     typeSpeed:80,
@@ -17,7 +15,7 @@ function HeroSection() {
     <div className="section_outer">
     <div className="header_top-tags">
       <p className="tags">&lt;html&gt;</p>
-      <p className="tags body">&lt;body&gt;</p>
+      <p className="tags bodyTag">&lt;body&gt;</p>
       <p className="tags h1-open">&lt;h1&gt;</p>
     </div>
 
@@ -36,9 +34,6 @@ function HeroSection() {
         </h4>
       </div>
     </div>
-    {/* <button className="header_contact-me btn" type="button">
-      <span>CONTACT ME!</span>
-    </button> */}
   </div>
   </header>
   );

@@ -1,5 +1,5 @@
 // Drawing with text. Ported from Generative Design book - http://www.generative-gestaltung.de - Original licence: http://www.apache.org/licenses/LICENSE-2.0
-function drowing(canvas){
+function drowing(canvas,parent){
     // Drawing with text. Ported from Generative Design book - http://www.generative-gestaltung.de - Original licence: http://www.apache.org/licenses/LICENSE-2.0
 
 // Application variables
@@ -17,7 +17,6 @@ var canvas;
 let index=0;
 let word=skills[0];
 var context;
-let flagg = false;
 
 var mouse = {x: 0, y: 0, down: false}
 
@@ -45,6 +44,8 @@ function mouseMove ( event ){
 }
 
 function draw() {
+  let rect = canvas.getBoundingClientRect();
+// console.log(canvas.);
   if ( mouse.down ) {
     var d = distance( position, mouse );
     var fontSize = minFontSize + d/2;
@@ -52,12 +53,14 @@ function draw() {
     var letter = word[counter];
     var stepSize = textWidth( letter, fontSize);
     if (true) {
-      var angle = Math.atan2(mouse.y-position.y, mouse.x-position.x);
+      console.log(mouse.y);
+      var angle = Math.atan2(mouse.y-(position.y), mouse.x-position.x);
       
       context.font = fontSize + "px Georgia";
     
       context.save();
-      context.translate((position.x-(window.innerWidth/2)), position.y);
+      console.log(position.x, position.y);
+      context.translate(position.x, position.y-canvas.getBoundingClientRect().top);
       context.rotate( angle );
       context.fillText(letter,0,0);
       context.restore();
@@ -70,7 +73,6 @@ function draw() {
         index=0;
         counter=0;
       }
-        console.log(angle);
       position.x = position.x + Math.cos(angle) * stepSize;
       position.y = position.y + Math.sin(angle) * stepSize;
 
@@ -97,7 +99,7 @@ function mouseDown( event ){
   position.x = event.pageX;
   position.y = event.pageY;
   
-  document.getElementById('info').style.display = 'none';
+  // document.getElementById('info').style.display = 'none';
 }
 
 function mouseUp( event ){

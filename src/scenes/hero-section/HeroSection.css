@@ -1,8 +1,11 @@
 /* Header */
 .home_section{
+  height:100vh;
+  background-image: linear-gradient(to left bottom, #396956, #2f6055, #285853, #234f4f, #21464a, #203d44, #1f353d, #1e2d35, #1c242b, #181b20, #121316, #070707);
+
   }
   
-  .tags.body{
+  .tags.bodyTag{
     padding-left: 20px;
   }
   .tags.h1-open{
@@ -46,9 +49,6 @@
     line-height: 1.3;
     overflow: hidden;
     white-space: nowrap;
-    animation: 
-      typing 3.5s steps(40, end),
-      blink-caret .75s step-end infinite;
   }
   .header_text-extended p{
     display:inline-block;

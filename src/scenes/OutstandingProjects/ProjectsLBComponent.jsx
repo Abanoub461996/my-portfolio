@@ -1,9 +1,19 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useTypewriter, Cursor} from 'react-simple-typewriter';
+
 // components
 
 function ProjectsLBComponent() {
-  const [cardTitles, setCardTitles] = useState(["FootBall","BasketBall", "Anime"]);
+  
+   
+  const { text} = useTypewriter(
 
+   {
+     /* Config */
+     words: ["OUTSTANDING PROJECTS"],
+     typeSpeed:80,
+    } 
+  )
 
   return (<>
       <div class="section_outer">
@@ -14,7 +24,7 @@ function ProjectsLBComponent() {
           <div class="personal_content">
           <h2 class="projects-title section-title">
             <p class="tags">&lt;h2&gt;</p>
-            OUTSTANDING PROJECTS
+            {text}
             <p class="tags">&lt;/h2&gt;</p>
           </h2>
             <p class="tags" style={{marginLeft:-50}}>&lt;p&gt;</p>

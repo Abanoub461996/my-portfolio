@@ -1,0 +1,28 @@
+.education_content-title, .title-ext{
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+.education .section-flex{
+  justify-content: space-around;
+}
+.academic ,.certificates{
+  min-height:200px
+}
+.academic_item-header, .online_item-header{
+  font-weight: 700;
+  padding-top:20px;
+}
+.date{
+  opacity:0.5;
+}
+.academic_item-discreption , .online_item-discreption{
+  padding-left:30px;
+}
+.edu-subtitle{
+  display: inline-block;
+}
+
+.education_content .tags{
+  display: inline-block;
+}

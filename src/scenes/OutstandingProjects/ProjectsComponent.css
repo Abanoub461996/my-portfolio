@@ -7,10 +7,11 @@
 .projects_content::-webkit-scrollbar-thumb {
 	background-color: #000000;
     border-radius: 20px;
+    overflow: hidden;
     
 }
 section.projects{
-    /* height:100%; */
+    
 }
 .projects_inner{
     height:90vh;
@@ -19,14 +20,14 @@ section.projects{
     height:100%;
     overflow-y: scroll;
     overflow-x: hidden;
+    background-color: white;
+    border-radius: 25px;
+    /* border-bottom-left-radius: 25px;
+    border-top-left-radius: 25px; */
 }
-.card_container{
-    /* visibility: hidden;
-    opacity: 0; */
-
+.projects_content .card_container:first-child{
+    margin-top: 0;
 }
-#project_1{
-    /* display: block;
-    opacity: 1; */
-
+.projects_content .card_container:last-child{
+    margin-bottom: 0;
 }

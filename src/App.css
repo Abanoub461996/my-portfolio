@@ -13,17 +13,18 @@ font-family: 'tailFont';
   src: url("./assets/fonts/GrapeNuts-Regular.otf");
 }
 :root {
-  --dark: #1d1d1d;
+  --dark: #000000;
   --light: #fff;
   --green: #28a92b;
   
 }
 
 body {
+  background-color: var(--dark);
   color: var(--light);
   margin: 0;
   padding: 0;
-  height: 500vh!important;
+  overflow-x: hidden;
 }
 
 * {
@@ -32,27 +33,21 @@ body {
   box-sizing: border-box;
   font-family: inherit;
 }
+a, a:hover, a:focus, a:active {
+  text-decoration: none;
+  color: inherit;
+}
 img{
   height:100%;
   width:100%;
 }
 .pageContainer{
-  display: flex;
-  position: fixed;
   width: 100%;
-  height:100vh;
-  background-image: linear-gradient(to left bottom, #396956, #2f6055, #285853, #234f4f, #21464a, #203d44, #1f353d, #1e2d35, #1c242b, #181b20, #121316, #070707);
-  align-items: center;
-}
-.left-portion,.right-portion{
-  width:50%;
-}
-.left-top, .left-bottom{
-  height:50vh;
 }
 .section_outer{
   width:90%;
-  margin:0 auto;
+  margin:50px auto;
+  margin-top: 0;
   padding-top:25px;
 }
 .section_inner{
@@ -81,6 +76,7 @@ img{
   font-size: xx-large;
   font-weight: bold;
   text-align: center;
+  -webkit-box-reflect: below 0 linear-gradient(transparent, transparent, rgba(228, 50, 50, 0.4));
 }
 .section-title p{
   display: inline-block;
@@ -90,4 +86,31 @@ img{
 .section-flex{
   display: flex;
   align-items:center;
+}
+#personal, #projects{
+  display: flex;
+  justify-content: space-evenly;
+  justify-items: center;
+}
+#L1,#L2,#L3,#L4,#R1,#R2,#R3,#R4{
+  opacity: 0.5;
+}
+.skills .section_inner{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#L1{
+  width: 45%;
+}
+#skills,#education{
+  background-color: var(--dark);
+  padding-bottom: 50px;
+}
+#personal{
+  background-color: var(--light);
+  color: var(--dark);
+}
+#side-bar{
+  opacity: 0;
 }
